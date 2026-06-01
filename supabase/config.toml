@@ -1,0 +1,33 @@
+project_id = "goycrjqlfmwzigimawti"
+
+# chat-webhook is deprecated — all traffic should use secure-chat-webhook
+[functions.chat-webhook]
+verify_jwt = false
+
+# secure-chat-webhook requires a valid Supabase JWT
+[functions.secure-chat-webhook]
+verify_jwt = true
+
+# book-appointment is public-facing (protected by shared secret instead)
+[functions.book-appointment]
+verify_jwt = false
+
+# create-webcall is public-facing (protected by shared secret instead)
+[functions.create-webcall]
+verify_jwt = false
+
+# create-phone-call is public-facing (protected by shared secret instead)
+[functions.create-phone-call]
+verify_jwt = false
+
+# retell-webhook receives calls from Retell AI servers (protected by HMAC signature)
+[functions.retell-webhook]
+verify_jwt = false
+
+# send-contact-email requires a valid Supabase JWT from the frontend SDK
+[functions.send-contact-email]
+verify_jwt = true
+
+# publish-blog requires a valid Supabase JWT (admin only)
+[functions.publish-blog]
+verify_jwt = true
