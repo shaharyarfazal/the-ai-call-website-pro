@@ -51,11 +51,11 @@ export default function DemoPricing() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {plans.map((plan, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: i * 0.1 }}
-              className={`bg-card border rounded-2xl p-8 transition-all duration-500 relative flex flex-col ${plan.popular ? "border-primary/40 shadow-[0_0_40px_hsl(32_100%_52%_/_0.1)]" : "border-border hover:border-primary/20"}`}
+              className={`bg-card border rounded-2xl p-8 transition-all duration-500 relative flex flex-col ${plan.popular ? "border-primary/40 shadow-[0_0_40px_hsl(230_100%_62%_/_0.12)]" : "border-border hover:border-primary/20"}`}
             >
               {plan.popular && (
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                  <div className="flex items-center gap-1.5 px-4 py-1 rounded-full bg-primary text-black text-xs font-bold">
+                  <div className="flex items-center gap-1.5 px-4 py-1 rounded-full bg-primary text-white text-xs font-bold">
                     <Zap className="h-3 w-3" /> Most Popular
                   </div>
                 </div>
@@ -81,7 +81,7 @@ export default function DemoPricing() {
 
               <Link to="/book-appointment"
                 className={`flex items-center justify-center w-full py-3.5 text-sm font-bold rounded-xl transition-all duration-300 ${plan.popular
-                  ? "text-black bg-primary hover:bg-primary/90 shadow-[0_0_25px_hsl(32_100%_52%_/_0.35)] hover:shadow-[0_0_40px_hsl(32_100%_52%_/_0.5)]"
+                  ? "text-white bg-primary hover:bg-primary/90 shadow-[0_0_25px_hsl(230_100%_62%_/_0.4)] hover:shadow-[0_0_40px_hsl(230_100%_62%_/_0.6)]"
                   : "text-foreground border border-foreground/20 hover:border-primary/50 hover:text-primary hover:bg-primary/5"
                 }`}
               >

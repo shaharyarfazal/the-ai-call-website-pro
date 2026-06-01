@@ -13,7 +13,6 @@ const urls: { path: string; label?: string }[] = [
   { path: '/contact' },
   { path: '/book-appointment' },
   { path: '/automate' },
-  { path: '/blog' },
   { path: '/services' },
   { path: '/demo' },
   { path: '/demo-request' },
@@ -87,8 +86,8 @@ export default function Sitemap() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent relative z-10 text-foreground">
       <Helmet>
-        <title>HTML Sitemap | The AI Call</title>
-        <meta name="description" content="Browse all public pages of The AI Call website via our human-readable HTML sitemap." />
+        <title>HTML Sitemap | The AI Call Pro</title>
+        <meta name="description" content="Browse all public pages of The AI Call Pro website via our human-readable HTML sitemap." />
         <link rel="canonical" href={canonical} />
       </Helmet>
       <Header />

@@ -21,12 +21,12 @@ function FeatureCard({ feature, index }: { feature: any; index: number }) {
       onMouseMove={handleMouseMove}
       className="group relative bg-card border border-border rounded-2xl p-8 sm:p-10 transition-all duration-500 hover:border-primary/40 overflow-hidden"
     >
-      {/* Brand orange spotlight on hover */}
+      {/* Indigo spotlight on hover */}
       <motion.div
         className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition duration-500 group-hover:opacity-100"
         style={{
           background: useMotionTemplate`
-            radial-gradient(400px circle at ${mouseX}px ${mouseY}px, hsl(32 100% 52% / 0.08), transparent 80%)
+            radial-gradient(400px circle at ${mouseX}px ${mouseY}px, hsl(230 100% 62% / 0.1), transparent 80%)
           `,
         }}
       />
@@ -67,8 +67,8 @@ export function FeaturesSection() {
 
   return (
     <section className="py-24 sm:py-40 bg-background relative overflow-hidden">
-      {/* Subtle orange ambient glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full bg-primary/[0.03] blur-[100px] pointer-events-none" />
+      {/* Subtle indigo ambient glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full bg-primary/[0.05] blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div

@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 export function CtaSection() {
   return (
     <section className="py-32 sm:py-48 bg-background border-t border-foreground/[0.05] relative overflow-hidden">
-      {/* Centered brand orange glow */}
+      {/* Centered indigo glow */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[700px] h-[400px] rounded-full bg-primary/[0.06] blur-[130px]" />
+        <div className="w-[700px] h-[400px] rounded-full blur-[130px]" style={{ background: "radial-gradient(ellipse, hsl(230 100% 62% / 0.08) 0%, hsl(250 80% 65% / 0.04) 50%, transparent 70%)" }} />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -40,14 +40,22 @@ export function CtaSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            {/* Primary CTA — brand orange glow */}
+            {/* Primary CTA — indigo gradient glow */}
             <Link
               to="/"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="group relative flex items-center gap-3 px-10 py-4 text-sm font-bold rounded-full text-black bg-primary hover:bg-primary/90 transition-all duration-300 shadow-[0_0_35px_hsl(32_100%_52%_/_0.45)] hover:shadow-[0_0_55px_hsl(32_100%_52%_/_0.65)]"
+              className="group relative flex items-center gap-3 px-10 py-4 text-sm font-bold rounded-full text-white transition-all duration-300 overflow-hidden"
+              style={{
+                background: "linear-gradient(135deg, hsl(230 100% 62%) 0%, hsl(250 80% 65%) 100%)",
+                boxShadow: "0 0 40px hsl(230 100% 62% / 0.5), 0 12px 35px hsl(230 100% 62% / 0.3), inset 0 1px 0 hsl(0 0% 100% / 0.15)",
+              }}
             >
               <Mic className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
               <span>Talk With AI Now</span>
+              <span
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ background: "linear-gradient(135deg, hsl(230 100% 68%) 0%, hsl(250 80% 72%) 100%)" }}
+              />
             </Link>
 
             <Link

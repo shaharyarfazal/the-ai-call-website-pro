@@ -56,15 +56,37 @@ export default function AiVoiceAgentsLeadQualification() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent relative z-10 text-foreground">
       <Helmet>
-        <title>AI Voice Agents for Lead Qualification | Automate Sales Prospecting</title>
-        <meta name="description" content="Automate lead qualification with AI voice agents. Intelligent lead scoring, real-time prospect engagement, and seamless CRM integration for better sales results." />
-        <meta name="keywords" content="AI voice agents, lead qualification, sales automation, prospect engagement, lead scoring, CRM integration" />
+        <title>AI Voice Agents for Lead Qualification | Sales Lead Qualifying Bots</title>
+        <meta name="description" content="Automate sales prospecting and lead qualification using custom AI voice agents. Live CRM integration, intelligent lead scoring, and instant follow-ups." />
+        <meta name="keywords" content="AI voice agents lead qualification, sales lead qualifying bot, automated sales prospecting, outbound AI voice qualification, Twilio lead bot" />
         <link rel="canonical" href={canonical} />
         
-        <meta property="og:title" content="AI Voice Agents for Lead Qualification | Automate Sales Prospecting" />
-        <meta property="og:description" content="Automate lead qualification with AI voice agents. Intelligent lead scoring, real-time prospect engagement, and seamless CRM integration for better sales results." />
+        <meta property="og:title" content="AI Voice Agents for Lead Qualification | Sales Lead Qualifying Bots" />
+        <meta property="og:description" content="Automate sales prospecting and lead qualification using custom AI voice agents. Live CRM integration, intelligent lead scoring, and instant follow-ups." />
         <meta property="og:type" content="service" />
         <meta property="og:url" content={canonical} />
+        <meta property="og:image" content="https://theaicall.pro/uploads/logo-96.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Voice Agents for Lead Qualification" />
+        <meta name="twitter:description" content="Connect with active prospects instantly while they are hot. Real-time CRM logging and automated scheduling built in." />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "AI Voice Agents for Lead Qualification",
+            "description": "Custom high-performance sales lead qualification and outbound dialer AI voice agent systems.",
+            "provider": {
+              "@type": "Organization",
+              "name": "The AI Call Pro",
+              "url": "https://theaicall.pro"
+            },
+            "areaServed": "US",
+            "hasCredential": "Certified Retell AI Partner"
+          })}
+        </script>
       </Helmet>
       
       <Header />

@@ -52,7 +52,6 @@ const menuCategories: MenuCategory[] = [
       { label: 'Case Studies', href: '/resources/case-studies', desc: 'Customer success stories' },
       { label: 'ROI Calculator', href: '/resources/roi-calculator', desc: 'Calculate your savings' },
       { label: 'Integration Guides', href: '/resources/integration-guides', desc: 'Step-by-step setup' },
-      { label: 'Blog', href: '/blog', desc: 'News & insights' },
       { label: 'FAQ', href: '/faq', desc: 'Common questions answered' },
     ],
   },
@@ -222,8 +221,8 @@ export function Header() {
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 z-10 hover:opacity-80 transition-opacity shrink-0" aria-label="The AI Call — Home">
-            <img src="/lovable-uploads/logo-96.png" alt="The AI Call" width="44" height="44" fetchPriority="high" className={cn("object-contain transition-all duration-300", scrolled ? "h-11 w-11 sm:h-9 sm:w-9" : "h-[50px] w-[50px] sm:h-11 sm:w-11")} />
-            <span className={cn("font-bold font-heading tracking-tight text-foreground transition-all duration-300", scrolled ? "text-xl sm:text-lg" : "text-2xl sm:text-xl")}>The AI Call</span>
+            <img src="/uploads/logo-96.png" alt="The AI Call Pro" width="44" height="44" fetchPriority="high" className={cn("object-contain transition-all duration-300", scrolled ? "h-11 w-11 sm:h-9 sm:w-9" : "h-[50px] w-[50px] sm:h-11 sm:w-11")} />
+            <span className={cn("font-bold font-heading tracking-tight text-foreground transition-all duration-300", scrolled ? "text-xl sm:text-lg" : "text-2xl sm:text-xl")}>The AI Call Pro</span>
           </Link>
 
           {/* Desktop — simple trigger links */}
@@ -239,7 +238,6 @@ export function Header() {
               <ChevronDown className={cn("h-3 w-3 transition-transform duration-200", megaOpen && "rotate-180")} />
             </button>
             <Link to="/demo" className="px-3 py-1.5 text-[13px] font-medium rounded-lg text-muted-foreground hover:text-foreground transition-colors">Demo</Link>
-            <Link to="/blog" className="px-3 py-1.5 text-[13px] font-medium rounded-lg text-muted-foreground hover:text-foreground transition-colors">Blog</Link>
             <Link to="/contact" className="px-3 py-1.5 text-[13px] font-medium rounded-lg text-muted-foreground hover:text-foreground transition-colors">Contact</Link>
           </div>
 
@@ -267,8 +265,8 @@ export function Header() {
                   <SheetDescription>Site navigation</SheetDescription>
                 </div>
                 <div className="flex items-center gap-2.5 px-5 py-4 border-b border-border">
-                  <img src="/lovable-uploads/logo-96.png" alt="The AI Call" width="40" height="40" className="h-10 w-10 object-contain" />
-                  <span className="font-bold text-xl font-heading tracking-tight">The AI Call</span>
+                  <img src="/uploads/logo-96.png" alt="The AI Call Pro" width="40" height="40" className="h-10 w-10 object-contain" />
+                  <span className="font-bold text-xl font-heading tracking-tight">The AI Call Pro</span>
                 </div>
                 <nav className="flex-1 px-3 py-3 overflow-y-auto" aria-label="Mobile navigation">
                   <div className="flex flex-col gap-0.5">

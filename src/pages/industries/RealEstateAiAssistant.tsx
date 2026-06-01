@@ -45,9 +45,38 @@ export default function RealEstateAiAssistant() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent relative z-10 text-foreground">
       <Helmet>
-        <title>Real Estate AI Assistant | Automated Property Inquiries & Lead Management</title>
-        <meta name="description" content="Transform your real estate business with AI. Handle property inquiries, schedule showings, and qualify leads 24/7 to never miss an opportunity." />
+        <title>Real Estate AI Assistant | Automated Showings & Lead Qualifiers</title>
+        <meta name="description" content="Boost agent productivity with custom real estate AI assistants. Automatically qualify active buyers, manage property inquiries 24/7, and schedule showings." />
+        <meta name="keywords" content="real estate AI assistant, property showings coordinator bot, MLS voice integration, lead qualifying bot real estate, virtual agent assistant" />
         <link rel="canonical" href={canonical} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Real Estate AI Assistant | Automated Showings & Lead Qualifiers" />
+        <meta property="og:description" content="Capture 100% of incoming leads 24/7. Handle property inquiries, MLS data queries, showing calendars, and CRM syncing automatically." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:image" content="https://theaicall.pro/uploads/logo-96.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Real Estate AI Answering & Showing Assistant" />
+        <meta name="twitter:description" content="Bridge MLS listings and active showing schedules with low-latency custom conversational agents." />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Real Estate AI Assistant Solutions",
+            "description": "Bespoke AI voice agents managing property inquiry logs, outbound lead qualification, and automated showing calendar updates.",
+            "provider": {
+              "@type": "Organization",
+              "name": "The AI Call Pro",
+              "url": "https://theaicall.pro"
+            },
+            "areaServed": "US",
+            "hasCredential": "Certified Retell AI Partner"
+          })}
+        </script>
       </Helmet>
       <Header />
       
@@ -57,14 +86,14 @@ export default function RealEstateAiAssistant() {
           <div className="container mx-auto max-w-5xl">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
-                <Badge variant="secondary" className="mb-6">
+                <Badge variant="secondary" className="mb-6 bg-primary/10 text-primary border border-primary/20">
                   Real Estate AI Solution
                 </Badge>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent leading-tight">
                   Real Estate AI Assistant
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  Never miss a lead again. Handle property inquiries, schedule showings, and qualify prospects 24/7 with your intelligent real estate assistant.
+                  Never miss an inbound listing lead. Instantly resolve property inquiries, coordinate showing calendars, and log qualified buyer needs to your CRM 24/7.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="text-lg px-8 py-4" asChild>
@@ -78,11 +107,12 @@ export default function RealEstateAiAssistant() {
                   </Button>
                 </div>
               </div>
-              <div className="animate-fade-in">
+              <div className="animate-fade-in relative group rounded-2xl overflow-hidden shadow-2xl border border-foreground/[0.06]">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-10" />
                 <img
                   src={heroImg}
-                  alt="Modern luxury property at golden hour"
-                  className="rounded-2xl shadow-2xl w-full object-cover aspect-video"
+                  alt="Luxury real estate property optimized for showings scheduled by custom voice AI agent"
+                  className="w-full object-cover aspect-video hover:scale-[1.02] transition-transform duration-700"
                   width={1280}
                   height={720}
                 />
@@ -92,25 +122,25 @@ export default function RealEstateAiAssistant() {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 bg-card/30">
+        <section className="py-20 px-4 bg-card/10 border-y border-foreground/[0.04]">
           <div className="container mx-auto max-w-5xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 AI Features for Real Estate
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Purpose-built AI capabilities designed specifically for real estate professionals.
+                Purpose-built AI capabilities designed specifically for high-performing real estate teams and brokerage offices.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <Card key={index} className="border-border hover:border-primary/50 transition-colors">
+                <Card key={index} className="border-border hover:border-primary/50 transition-colors bg-card/30">
                   <CardHeader>
                     <div className="mb-4">{feature.icon}</div>
                     <CardTitle className="text-xl">{feature.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-base leading-relaxed">
+                    <CardDescription className="text-base leading-relaxed text-muted-foreground">
                       {feature.description}
                     </CardDescription>
                   </CardContent>
@@ -126,25 +156,26 @@ export default function RealEstateAiAssistant() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  Close More Deals Faster
+                  Close More Listing Deals Faster
                 </h2>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Convert more leads into clients with instant response times and 24/7 availability.
+                  Maximize transaction volume by qualifying every buyer immediately, scheduling bookings, and notifying key agents.
                 </p>
                 <div className="space-y-4">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-center gap-3">
                       <CheckCircle className="h-6 w-6 text-primary flex-shrink-0" />
-                      <span className="text-lg">{benefit}</span>
+                      <span className="text-lg font-medium">{benefit}</span>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="space-y-6">
+              <div className="relative group rounded-2xl overflow-hidden shadow-xl border border-foreground/[0.06]">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-10" />
                 <img
                   src={aiPhoneImg}
-                  alt="AI assistant on smartphone showing property listings"
-                  className="rounded-2xl shadow-xl w-full object-cover aspect-square"
+                  alt="High-performance real estate AI voice assistant showing virtual property listing on a smartphone app interface"
+                  className="w-full object-cover aspect-square hover:scale-[1.02] transition-transform duration-700"
                   loading="lazy"
                   width={800}
                   height={800}
@@ -160,7 +191,7 @@ export default function RealEstateAiAssistant() {
             <div className="relative rounded-2xl overflow-hidden border border-primary/20">
               <img
                 src={closingImg}
-                alt="Real estate agent closing a deal with happy clients"
+                alt="Happy home buyers successfully closing property transaction coordinated by real estate voice assistant"
                 className="absolute inset-0 w-full h-full object-cover opacity-20"
                 loading="lazy"
                 width={1280}

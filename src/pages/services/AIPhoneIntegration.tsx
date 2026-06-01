@@ -57,9 +57,38 @@ export default function AiPhoneIntegration() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent relative z-10 text-foreground">
       <Helmet>
-        <title>AI Phone Integration | Custom Voice AI Phone System Setup</title>
-        <meta name="description" content="Custom AI phone integration connecting voice AI to your existing phone system, CRM, and workflows. Rapid deployment with custom voice profiles." />
+        <title>AI Phone Integration Services | Custom Voice Bot Telephony Setup</title>
+        <meta name="description" content="Integrate advanced AI voice capabilities with your existing CRM, Twilio SIP, Plivo, or custom PBX phone systems. Rapid custom deployment in days." />
+        <meta name="keywords" content="AI phone integration, Twilio voice integration, custom SIP trunking, Plivo voice bot setup, CRM voice integration, Retell AI telephony" />
         <link rel="canonical" href={canonical} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="AI Phone Integration Services | Custom Voice Bot Telephony Setup" />
+        <meta property="og:description" content="Connect voice AI capability to your existing Twilio, Vonage, Plivo, or SIP infrastructure with direct CRM two-way syncing." />
+        <meta property="og:type" content="service" />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:image" content="https://theaicall.pro/uploads/logo-96.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Phone Integration Services" />
+        <meta name="twitter:description" content="Seamlessly bridge your existing telephony setup with ultra-low latency custom-tuned neural AI voice channels." />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "AI Phone Integration Services",
+            "description": "Professional telephony integration service connecting voice AI systems directly to existing phone lines, SIP systems, and enterprise CRMs.",
+            "provider": {
+              "@type": "Organization",
+              "name": "The AI Call Pro",
+              "url": "https://theaicall.pro"
+            },
+            "areaServed": "US",
+            "hasCredential": "Certified Retell AI Partner"
+          })}
+        </script>
       </Helmet>
       <Header />
       

@@ -375,7 +375,7 @@ export function CallbackForm({
                 <button
                   type="button"
                   onClick={startWebCall}
-                  className="flex items-center justify-center gap-2 px-5 py-2 text-xs font-bold rounded-full text-black bg-primary hover:bg-primary/90 transition-all shadow-[0_0_15px_hsl(32_100%_52%_/_0.25)] w-full sm:w-auto"
+                  className="flex items-center justify-center gap-2 px-5 py-2 text-xs font-bold rounded-full text-white bg-primary hover:bg-primary/90 transition-all shadow-[0_0_15px_hsl(230_100%_62%_/_0.3)] w-full sm:w-auto"
                 >
                   <Mic className="h-3.5 w-3.5" />
                   <span>Start Web Call</span>
@@ -384,7 +384,7 @@ export function CallbackForm({
                 <button
                   type="button"
                   disabled
-                  className="flex items-center justify-center gap-2 px-5 py-2 text-xs font-bold rounded-full text-black bg-primary/40 cursor-not-allowed w-full sm:w-auto"
+                  className="flex items-center justify-center gap-2 px-5 py-2 text-xs font-bold rounded-full text-white bg-primary/40 cursor-not-allowed w-full sm:w-auto"
                 >
                   <Loader2 className="h-3.5 w-3.5 animate-spin" />
                   <span>Connecting...</span>
@@ -556,7 +556,7 @@ export function CallbackForm({
           <button
             type="submit"
             disabled={status === "loading" || !phone.trim() || !turnstileToken}
-            className="group relative flex items-center justify-center gap-3 w-full py-4 text-sm font-bold rounded-xl text-black bg-primary hover:bg-primary/90 transition-all duration-300 shadow-[0_0_30px_hsl(32_100%_52%_/_0.35)] hover:shadow-[0_0_50px_hsl(32_100%_52%_/_0.55)] disabled:opacity-60 disabled:cursor-not-allowed disabled:shadow-none"
+            className="group relative flex items-center justify-center gap-3 w-full py-4 text-sm font-bold rounded-xl text-white bg-primary hover:bg-primary/90 transition-all duration-300 shadow-[0_0_30px_hsl(230_100%_62%_/_0.4)] hover:shadow-[0_0_50px_hsl(230_100%_62%_/_0.6)] disabled:opacity-60 disabled:cursor-not-allowed disabled:shadow-none"
           >
             {status === "loading" ? (
               <>

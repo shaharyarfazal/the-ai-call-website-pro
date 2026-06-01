@@ -57,9 +57,38 @@ export default function CustomVoiceAgents() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent relative z-10 text-foreground">
       <Helmet>
-        <title>Custom AI Voice Agents | Bespoke Voice AI Development</title>
-        <meta name="description" content="Bespoke AI voice agents with custom personalities, multi-agent orchestration, and goal-oriented conversations designed for your business." />
+        <title>Custom AI Voice Agents Development | Bespoke Conversational Bots</title>
+        <meta name="description" content="Design and deploy custom AI voice agents tailored to your brand personality. Implement multi-agent swarms, goal-oriented dialog, and full CRM integrations." />
+        <meta name="keywords" content="custom voice agents, bespoke voice AI development, conversational AI swarm, brand voice modeling, custom AI voice bot company" />
         <link rel="canonical" href={canonical} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Custom AI Voice Agents Development | Bespoke Conversational Bots" />
+        <meta property="og:description" content="Design and deploy custom AI voice agents tailored to your brand personality. Implement multi-agent swarms, goal-oriented dialog, and full CRM integrations." />
+        <meta property="og:type" content="service" />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:image" content="https://theaicall.pro/uploads/logo-96.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Custom AI Voice Agents Development Services" />
+        <meta name="twitter:description" content="Engage clients with custom-tuned emotion cues, unique brand cadence, and advanced context tracking." />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Custom AI Voice Agents Development",
+            "description": "Bespoke engineering service specializing in custom voice modeling, semantic training, multi-agent orchestration, and complex workflow automation.",
+            "provider": {
+              "@type": "Organization",
+              "name": "The AI Call Pro",
+              "url": "https://theaicall.pro"
+            },
+            "areaServed": "US",
+            "hasCredential": "Certified Retell AI Partner"
+          })}
+        </script>
       </Helmet>
       <Header />
       

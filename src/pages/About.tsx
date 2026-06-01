@@ -16,16 +16,39 @@ export default function About() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent relative z-10 text-foreground">
       <Helmet>
-        <title>About The AI Call | Voice AI for Business (USA)</title>
-        <meta name="description" content="We build simple voice AI for business. Answer calls, book meetings, and automate support for US companies." />
+        <title>About The AI Call Pro | Custom Voice AI Solutions USA</title>
+        <meta name="description" content="Discover The AI Call Pro mission and leading voice AI architects. Certified Retell AI partner delivering high-performance, human-like voice receptionist bots." />
+        <meta name="keywords" content="about The AI Call Pro, certified Retell AI developer, voice AI architects, custom voice bot company USA" />
         <link rel="canonical" href={canonical} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="About The AI Call Pro | Custom Voice AI Solutions USA" />
+        <meta property="og:description" content="Learn about our expert team, leading voice AI engines, and certified Upwork Top Rated Plus specialized voice bot builds." />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:image" content="https://theaicall.pro/uploads/logo-96.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About The AI Call Pro | Custom Voice AI Solutions" />
+        <meta name="twitter:description" content="Discover our mission to automate professional voice channels using state-of-the-art neural synthesis and sub-second latency pipelines." />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "About The AI Call Pro",
+            "description": "Information about The AI Call Pro agency, specializing in custom high-performance voice AI automation for professional teams.",
+            "url": canonical
+          })}
+        </script>
       </Helmet>
       <Header />
       <main className="flex-grow">
         <section className="pt-32 pb-20 px-4">
           <div className="container mx-auto max-w-5xl">
             <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">About TheAICall.pro</h1>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">About TheAICall Pro</h1>
           <p className="mt-4 text-lg text-primary">The Best Voice Bot Company</p>
           <p className="mt-2 text-muted-foreground max-w-3xl mx-auto">
             We are a custom AI automation agency, not a self-serve SaaS platform. 
@@ -127,7 +150,7 @@ export default function About() {
             <h2 className="text-3xl font-bold tracking-tight">Our Collaborative Workspace</h2>
             <p className="text-muted-foreground mt-2">Designing the future of human-agent collaboration.</p>
           </header>
-          <img src={aboutTeamImg} alt="The AI Call team collaborating in a modern office" className="rounded-2xl shadow-xl w-full object-cover aspect-video border border-foreground/[0.06]" width={1280} height={720} />
+          <img src={aboutTeamImg} alt="The AI Call Pro team collaborating in a modern office" className="rounded-2xl shadow-xl w-full object-cover aspect-video border border-foreground/[0.06]" width={1280} height={720} />
         </div>
 
         {/* Upwork Certified Partner & Trust Section */}
@@ -174,7 +197,7 @@ export default function About() {
         <div className="text-center animate-fade-in" style={{ animationDelay: '0.58s' }}>
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join hundreds of businesses that trust TheAICall.pro for their voice AI needs. 
+            Join hundreds of businesses that trust TheAICall Pro for their voice AI needs. 
             Let's discuss how we can help you achieve your goals.
           </p>
           <div className="flex gap-4 justify-center">

@@ -58,7 +58,6 @@ const CaseStudies = lazy(() => import("./pages/resources/CaseStudies"));
 const AIGlossary = lazy(() => import("./pages/resources/AIGlossary"));
 const GettingStarted = lazy(() => import("./pages/resources/GettingStarted"));
 const IntegrationHub = lazy(() => import("./pages/resources/IntegrationHub"));
-const BlogPostTemplate = lazy(() => import("./pages/resources/BlogPostTemplate"));
 const AIIndustryTrends = lazy(() => import("./pages/resources/AIIndustryTrends"));
 const FAQExpanded = lazy(() => import("./pages/resources/FAQExpanded"));
 const IntegrationGuides = lazy(() => import("./pages/resources/IntegrationGuides"));
@@ -77,8 +76,6 @@ const Careers = lazy(() => import("./pages/company/Careers"));
 // Core/Auth pages
 const Auth = lazy(() => import("./pages/Auth"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
-const Blog = lazy(() => import("./pages/Blog"));
-const BlogPost = lazy(() => import("./pages/BlogPost"));
 const BookAppointment = lazy(() => import("./pages/BookAppointment"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
@@ -93,7 +90,6 @@ const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
 const AdminOverview = lazy(() => import("./pages/admin/AdminOverview"));
 const UserManagement = lazy(() => import("./pages/admin/UserManagement"));
 const BookingManagement = lazy(() => import("./pages/admin/BookingManagement"));
-const BlogManagement = lazy(() => import("./pages/admin/BlogManagement"));
 const Settings = lazy(() => import("./pages/admin/Settings"));
 
 const queryClient = new QueryClient({
@@ -167,7 +163,6 @@ const App = () => {
                   <Route path="/resources/ai-glossary" element={<AIGlossary />} />
                   <Route path="/resources/getting-started" element={<GettingStarted />} />
                   <Route path="/resources/integration-hub" element={<IntegrationHub />} />
-                  <Route path="/resources/blog-post-template" element={<BlogPostTemplate />} />
                   <Route path="/resources/ai-industry-trends" element={<AIIndustryTrends />} />
                   <Route path="/resources/faq-expanded" element={<FAQExpanded />} />
                   <Route path="/resources/integration-guides" element={<IntegrationGuides />} />
@@ -186,8 +181,6 @@ const App = () => {
                   {/* Core/Auth routes */}
                   <Route path="/auth" element={<Auth />} />
                   <Route path="/dashboard" element={<Dashboard />} />
-                  <Route path="/blog" element={<Blog />} />
-                  <Route path="/blog/:id" element={<BlogPost />} />
                   <Route path="/book-appointment" element={<BookAppointment />} />
                   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                   <Route path="/terms-of-service" element={<TermsOfService />} />
@@ -203,7 +196,6 @@ const App = () => {
                     <Route index element={<AdminOverview />} />
                     <Route path="users" element={<UserManagement />} />
                     <Route path="bookings" element={<BookingManagement />} />
-                    <Route path="blog" element={<BlogManagement />} />
                     <Route path="settings" element={<Settings />} />
                   </Route>
                   

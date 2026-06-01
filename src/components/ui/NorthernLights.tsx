@@ -56,7 +56,7 @@ export function NorthernLights({ audioLevel = 0, isListening = false }: Northern
     const dragons = [
       { color: [0, 255, 180], speed: 0.7, xBase: 0.5, yBase: 0.4, xVar: 0.4, yVar: 0.3, f1: 0.5, f2: 0.3, length: 35, seed: 0 },
       { color: [120, 80, 255], speed: 0.5, xBase: 0.3, yBase: 0.6, xVar: 0.3, yVar: 0.4, f1: 0.4, f2: 0.2, length: 40, seed: 10 },
-      { color: [255, 161, 10], speed: 0.8, xBase: 0.8, yBase: 0.8, xVar: 0.4, yVar: 0.4, f1: 0.7, f2: 0.3, length: 35, seed: 40 },
+      { color: [99, 145, 255], speed: 0.8, xBase: 0.8, yBase: 0.8, xVar: 0.4, yVar: 0.4, f1: 0.7, f2: 0.3, length: 35, seed: 40 },
     ];
 
     ctx.globalCompositeOperation = isDark ? "screen" : "multiply";

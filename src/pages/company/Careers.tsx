@@ -12,8 +12,8 @@ export default function Careers() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent relative z-10 text-foreground">
       <Helmet>
-        <title>Careers at The AI Call | Build Voice AI</title>
-        <meta name="description" content="Join The AI Call to build voice AI that helps businesses across the USA." />
+        <title>Careers at The AI Call Pro | Build Voice AI</title>
+        <meta name="description" content="Join The AI Call Pro to build voice AI that helps businesses across the USA." />
         <link rel="canonical" href={canonical} />
       </Helmet>
       <Header />

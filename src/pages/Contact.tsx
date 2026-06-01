@@ -99,10 +99,10 @@ export default function Contact() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent relative z-10 text-foreground">
       <Helmet>
-        <title>Contact The AI Call | Talk to Our Team</title>
-        <meta name="description" content="Get in touch with The AI Call. Ask about voice AI for business, demos, and pricing across the USA." />
+        <title>Contact The AI Call Pro | Talk to Our Team</title>
+        <meta name="description" content="Get in touch with The AI Call Pro. Ask about voice AI for business, demos, and pricing across the USA." />
         <link rel="canonical" href={canonical} />
-        <meta property="og:title" content="Contact The AI Call" />
+        <meta property="og:title" content="Contact The AI Call Pro" />
         <meta property="og:description" content="Talk to our team about voice AI for business, demos, and pricing." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonical} />
@@ -115,7 +115,7 @@ export default function Contact() {
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Contact Us</h1>
               <p className="mt-4 text-lg text-primary">Get in Touch</p>
               <p className="mt-2 text-muted-foreground max-w-3xl mx-auto">
-                Ready to see how TheAICall.pro can help your business? Book an appointment or send us a message — we're here for you.
+                Ready to see how TheAICall Pro can help your business? Book an appointment or send us a message — we're here for you.
               </p>
             </div>
 
@@ -261,7 +261,7 @@ export default function Contact() {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle>Why The AI Call?</CardTitle>
+                    <CardTitle>Why The AI Call Pro?</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3 text-muted-foreground text-sm">
                     <p>✅ 24/7 AI voice agents that never miss a call</p>

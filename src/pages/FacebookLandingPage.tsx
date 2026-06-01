@@ -194,13 +194,37 @@ export default function FacebookLandingPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background relative z-10 text-foreground">
       <Helmet>
-        <title>Free Demo — Stop Losing Revenue to Missed Calls | The AI Call</title>
-        <meta name="description" content="Book a free demo and see how AI voice agents answer every call in under 1 second. 500+ businesses trust The AI Call. No credit card required." />
+        <title>AI Voice Receptionist Live Demo | The AI Call Pro</title>
+        <meta name="description" content="Experience a live demo of our custom clinical and professional voice AI receptionists. Qualify prospects, book appointments 24/7, and test sub-second latency." />
+        <meta name="keywords" content="AI voice receptionist demo, test voice bot live, clinical answering bot demo, automated appointment scheduling demo" />
         <link rel="canonical" href={canonical} />
-        <meta property="og:title" content="Free Demo — AI Voice Agents That Answer Every Call" />
-        <meta property="og:description" content="Stop losing revenue to missed calls. AI answers every call in <1 second, qualifies leads, books appointments 24/7." />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="AI Voice Receptionist Live Demo | The AI Call Pro" />
+        <meta property="og:description" content="Experience a live demo of our custom clinical and professional voice AI receptionists. Qualify prospects, book appointments 24/7, and test sub-second latency." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonical} />
+        <meta property="og:image" content="https://theaicall.pro/uploads/logo-96.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Voice Receptionist Live Demo" />
+        <meta name="twitter:description" content="Talk to our custom voice agents live and test our ultra-low conversation latency in real time." />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "AI Voice Answering receptionist Live Demo Page",
+            "description": "Interactive live demo playground where professional teams can talk to our voice bot and test automated scheduling.",
+            "url": canonical,
+            "publisher": {
+              "@type": "Organization",
+              "name": "The AI Call Pro",
+              "url": "https://theaicall.pro"
+            }
+          })}
+        </script>
       </Helmet>
 
       {/* ── Identical Premium Header structure, minus center links and CTA buttons ── */}
@@ -210,14 +234,14 @@ export default function FacebookLandingPage() {
           {/* Brand Logo (Links to page itself to lock focus) */}
           <Link to="/ai-voice-receptionist-demo" className="flex items-center gap-2.5 z-10 hover:opacity-80 transition-opacity shrink-0">
             <img 
-              src="/lovable-uploads/logo-96.png" 
-              alt="The AI Call" 
+              src="/uploads/logo-96.png" 
+              alt="The AI Call Pro" 
               width="44" 
               height="44" 
               className={cn("object-contain transition-all duration-300", scrolled ? "h-11 w-11 sm:h-9 sm:w-9" : "h-[50px] w-[50px] sm:h-11 sm:w-11")} 
             />
             <span className={cn("font-bold font-heading tracking-tight text-foreground transition-all duration-300", scrolled ? "text-xl sm:text-lg" : "text-2xl sm:text-xl")}>
-              The AI Call
+              The AI Call Pro
             </span>
           </Link>
 
@@ -243,13 +267,13 @@ export default function FacebookLandingPage() {
               </div>
 
               <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight font-heading mb-5 sm:mb-6 leading-[1.08] animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
-                Stop Losing Revenue{' '}
+                Scale Inbound{' '}
                 <br className="hidden sm:block" />
-                to <span className="text-primary">Missed Calls</span>
+                with <span className="text-primary">Premium Voice AI</span>
               </h1>
 
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-5 sm:mb-6 leading-relaxed animate-[fadeInUp_0.8s_ease-out_0.35s_both] px-2">
-                AI Voice Agents That Answer Every Call in <span className="text-primary font-semibold">&lt;1 Second</span> — Qualify Leads, Book Appointments, and Close Deals 24/7.
+                Intelligent clinical and agency voice receptionists that qualify prospect inquiries, schedule consultations, and automate customer support 24/7. Fully customized for professional workflows.
               </p>
 
               {/* Social proof bar */}
@@ -303,7 +327,7 @@ export default function FacebookLandingPage() {
                   <>
                     <button
                       onClick={scrollToForm}
-                      className="group relative flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-bold rounded-full text-black bg-primary hover:bg-primary/90 transition-all duration-300 shadow-[0_0_35px_hsl(32_100%_52%_/_0.45)] hover:shadow-[0_0_55px_hsl(32_100%_52%_/_0.65)] w-full sm:w-auto justify-center"
+                      className="group relative flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-bold rounded-full text-white transition-all duration-300 w-full sm:w-auto justify-center"
                     >
                       <span>Book Free Demo</span>
                       <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -317,8 +341,8 @@ export default function FacebookLandingPage() {
                     </button>
                   </>
                 ) : isStarting ? (
-                  <button disabled className="flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-bold rounded-full text-black bg-primary/50 cursor-not-allowed w-full sm:w-auto justify-center">
-                    <Loader2 className="h-4 w-4 animate-spin text-black" />
+                  <button disabled className="flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-bold rounded-full text-white bg-primary/50 cursor-not-allowed w-full sm:w-auto justify-center">
+                    <Loader2 className="h-4 w-4 animate-spin text-white" />
                     <span>Connecting...</span>
                   </button>
                 ) : (
@@ -370,14 +394,14 @@ export default function FacebookLandingPage() {
           <div className="flex flex-col items-center max-w-2xl">
             <div className="flex items-center gap-2.5 mb-4 group">
               <img
-                src="/lovable-uploads/logo-96.png"
-                alt="The AI Call Logo"
+                src="/uploads/logo-96.png"
+                alt="The AI Call Pro Logo"
                 width="44"
                 height="44"
                 loading="lazy"
                 className="h-[50px] w-[50px] sm:h-11 sm:w-11 object-contain transition-all duration-300"
               />
-              <span className="font-bold font-heading tracking-tight text-foreground text-2xl sm:text-xl">The AI Call</span>
+              <span className="font-bold font-heading tracking-tight text-foreground text-2xl sm:text-xl">The AI Call Pro</span>
             </div>
             
             <address className="not-italic flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
@@ -412,7 +436,7 @@ export default function FacebookLandingPage() {
 
           {/* Bottom copyright alignment bar */}
           <div className="flex justify-center items-center text-xs text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} The AI Call. All Rights Reserved.</p>
+            <p>&copy; {new Date().getFullYear()} The AI Call Pro. All Rights Reserved.</p>
           </div>
         </div>
       </footer>

@@ -57,9 +57,38 @@ export default function VoiceAIOnboarding() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent relative z-10 text-foreground">
       <Helmet>
-        <title>Voice AI Onboarding | Rapid AI Voice System Setup & Training</title>
-        <meta name="description" content="Complete Voice AI onboarding with guided setup, rapid deployment in 48 hours, team training, and continuous optimization support." />
+        <title>Voice AI Onboarding Services | Rapid System Setup & Call Flow Design</title>
+        <meta name="description" content="Structured 48-hour Voice AI onboarding. Discovery, requirements workshop, voice calibration, scenario testing, team training, and continuous optimization." />
+        <meta name="keywords" content="voice AI onboarding, automated receptionist training, Retell AI onboarding, custom voice bot deployment, call flow mapping" />
         <link rel="canonical" href={canonical} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Voice AI Onboarding Services | Rapid System Setup & Call Flow Design" />
+        <meta property="og:description" content="Go from requirements workshop to live production in 48 hours with our dedicated onboarding specialists. Full testing, voice calibration, and training." />
+        <meta property="og:type" content="service" />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:image" content="https://theaicall.pro/uploads/logo-96.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Voice AI Onboarding & Launch Services" />
+        <meta name="twitter:description" content="Frictionless onboarding covering requirements discovery, scenario testing, calibration, and team training." />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Voice AI Onboarding Services",
+            "description": "Complete setup, testing, voice calibration, and launch training services for custom voice AI agents.",
+            "provider": {
+              "@type": "Organization",
+              "name": "The AI Call Pro",
+              "url": "https://theaicall.pro"
+            },
+            "areaServed": "US",
+            "hasCredential": "Certified Retell AI Partner"
+          })}
+        </script>
       </Helmet>
       <Header />
       

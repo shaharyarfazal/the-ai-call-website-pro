@@ -340,7 +340,7 @@ export default function BlogPost() {
                     {/* Pulsing Play Button */}
                     <button
                       onClick={() => setIsPlayingVideo(true)}
-                      className="relative z-10 flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary text-black transition-all duration-300 shadow-[0_0_40px_hsl(32_100%_52%_/_0.5)] hover:shadow-[0_0_60px_hsl(32_100%_52%_/_0.8)] hover:scale-110 cursor-pointer"
+                      className="relative z-10 flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary text-white transition-all duration-300 shadow-[0_0_40px_hsl(230_100%_62%_/_0.5)] hover:shadow-[0_0_60px_hsl(230_100%_62%_/_0.75)] hover:scale-110 cursor-pointer"
                       title="Play Voice AI Demo"
                     >
                       <Play className="h-6 w-6 sm:h-8 sm:w-8 fill-black translate-x-0.5" />
@@ -564,7 +564,7 @@ export default function BlogPost() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/?startCall=true"
-                className="w-full sm:w-auto group relative flex items-center justify-center gap-3 px-8 py-3.5 text-xs font-bold rounded-full text-black bg-primary hover:bg-primary/90 transition-all duration-300 shadow-[0_0_25px_hsl(32_100%_52%_/_0.4)] hover:shadow-[0_0_45px_hsl(32_100%_52%_/_0.6)] cursor-pointer"
+                className="w-full sm:w-auto group relative flex items-center justify-center gap-3 px-8 py-3.5 text-xs font-bold rounded-full text-white bg-primary hover:bg-primary/90 transition-all duration-300 shadow-[0_0_25px_hsl(230_100%_62%_/_0.4)] hover:shadow-[0_0_45px_hsl(230_100%_62%_/_0.6)] cursor-pointer"
               >
                 <Play className="h-3.5 w-3.5 fill-black group-hover:scale-110 transition-transform duration-300" />
                 <span>Talk With AI Now</span>

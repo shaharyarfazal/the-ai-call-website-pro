@@ -36,7 +36,6 @@ const footerLinks = {
       { label: 'Integration Guides', href: '/resources/integration-guides' },
       { label: 'AI Glossary', href: '/resources/ai-glossary' },
       { label: 'Industry Trends', href: '/resources/ai-industry-trends' },
-      { label: 'Blog', href: '/blog' },
       { label: 'FAQ', href: '/faq' },
     ],
   },
@@ -69,16 +68,16 @@ export function Footer() {
 
           {/* Brand column */}
           <div className="col-span-2">
-            <Link to="/" className="flex items-center gap-2.5 mb-5 group" aria-label="The AI Call Home">
+            <Link to="/" className="flex items-center gap-2.5 mb-5 group" aria-label="The AI Call Pro Home">
               <img
-                src="/lovable-uploads/logo-96.png"
-                alt="The AI Call Logo"
+                src="/uploads/logo-96.png"
+                alt="The AI Call Pro Logo"
                 width="44"
                 height="44"
                 loading="lazy"
                 className="h-[50px] w-[50px] sm:h-11 sm:w-11 object-contain transition-all duration-300"
               />
-              <span className="font-bold font-heading tracking-tight text-foreground text-2xl sm:text-xl">The AI Call</span>
+              <span className="font-bold font-heading tracking-tight text-foreground text-2xl sm:text-xl">The AI Call Pro</span>
             </Link>
             <p className="text-sm text-foreground/85 leading-relaxed mb-6 max-w-xs">
               AI voice agents that answer every call in under 1 second. Qualify leads, book appointments, and close deals — 24/7. Certified Retell AI Partner.
@@ -130,7 +129,7 @@ export function Footer() {
             >
               {/* Profile photo */}
               <img
-                src="/lovable-uploads/sherry-profile.png"
+                src="/uploads/sherry-profile.png"
                 alt="Muhammad Shaharyar — Top Rated on Upwork"
                 width="32"
                 height="32"
@@ -186,7 +185,7 @@ export function Footer() {
             { value: '4.9★', label: 'Client Rating' },
           ].map((stat) => (
             <div key={stat.label} className="flex items-center gap-2 text-center">
-              <span className="text-sm sm:text-base font-bold text-amber-700 dark:text-primary">{stat.value}</span>
+              <span className="text-sm sm:text-base font-bold" style={{ background: "linear-gradient(135deg, hsl(230 100% 72%), hsl(199 100% 65%))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>{stat.value}</span>
               <span className="text-[10px] sm:text-[11px] text-muted-foreground">{stat.label}</span>
             </div>
           ))}
@@ -194,7 +193,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
-          <p>&copy; {currentYear} The AI Call. All Rights Reserved.</p>
+          <p>&copy; {currentYear} The AI Call Pro. All Rights Reserved.</p>
           <nav className="flex items-center gap-4 sm:gap-6 flex-wrap justify-center" aria-label="Legal">
             {legalLinks.map((link) => (
               <Link key={link.href} to={link.href} className="hover:text-primary transition-colors">{link.label}</Link>

@@ -42,30 +42,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-  <url>
-    <loc>https://theaicall.pro/blog</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://theaicall.pro/blog/how-to-choose-the-best-voice-ai-agency-for-your-business</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://theaicall.pro/blog/step-by-step-guide-how-to-set-up-outbound-ai-calling</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://theaicall.pro/blog/why-every-medical-clinic-needs-an-ai-voice-receptionist-in-2026</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
+
   <url>
     <loc>https://theaicall.pro/ai-voice-receptionist-demo</loc>
     <lastmod>2026-05-21</lastmod>

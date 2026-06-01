@@ -22,8 +22,7 @@ export function HowItWorksSection() {
 
   return (
     <section className="py-24 sm:py-40 bg-background border-y border-foreground/[0.05] relative overflow-hidden">
-      {/* Subtle brand glow behind section */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] rounded-full bg-primary/[0.04] blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] rounded-full pointer-events-none" style={{ background: "radial-gradient(ellipse, hsl(230 100% 62% / 0.07) 0%, transparent 70%)", filter: "blur(100px)" }} />
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -51,7 +50,8 @@ export function HowItWorksSection() {
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="hidden lg:block absolute top-8 left-[18%] right-[18%] h-px bg-gradient-to-r from-primary/10 via-primary/40 to-primary/10 origin-left"
+            className="hidden lg:block absolute top-8 left-[18%] right-[18%] h-px origin-left"
+            style={{ background: "linear-gradient(90deg, hsl(230 100% 62% / 0.15), hsl(230 100% 62% / 0.5), hsl(250 80% 65% / 0.5), hsl(230 100% 62% / 0.15))" }}
           />
 
           {steps.map((step, i) => (
@@ -63,12 +63,21 @@ export function HowItWorksSection() {
               transition={{ duration: 0.8, delay: 0.15 + i * 0.18, ease: [0.22, 1, 0.36, 1] }}
               className="flex flex-col items-center text-center group"
             >
-              {/* Step number with orange ring on hover */}
+              {/* Step number with indigo ring on hover */}
               <div className="relative mb-10 w-16 h-16 flex items-center justify-center">
-                <div className="absolute inset-0 rounded-full border border-foreground/10 group-hover:border-primary/40 transition-colors duration-700" />
-                <div className="absolute inset-0 rounded-full bg-primary/0 group-hover:bg-primary/5 transition-colors duration-700" />
-                <span className="text-3xl font-light text-foreground/20 group-hover:text-primary/60 transition-colors duration-700 tabular-nums">
-                  {step.number}
+                <div className="absolute inset-0 rounded-full border border-foreground/10 group-hover:border-primary/50 transition-colors duration-700" />
+                <div className="absolute inset-0 rounded-full bg-primary/0 group-hover:bg-primary/8 group-hover:shadow-[0_0_24px_hsl(230_100%_62%_/_0.25)] transition-all duration-700" />
+                <span
+                  className="relative text-3xl font-light tabular-nums transition-all duration-700"
+                  style={{
+                    color: "hsl(var(--foreground) / 0.2)",
+                  }}
+                >
+                  <span className="group-hover:opacity-0 transition-opacity duration-300 absolute inset-0 flex items-center justify-center">{step.number}</span>
+                  <span
+                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ background: "linear-gradient(135deg, hsl(230 100% 72%), hsl(199 100% 65%))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
+                  >{step.number}</span>
                 </span>
               </div>
 

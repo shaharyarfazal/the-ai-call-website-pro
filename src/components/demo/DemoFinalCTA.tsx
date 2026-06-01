@@ -45,7 +45,7 @@ export default function DemoFinalCTA({ onScrollToForm, onStartCall, isCallActive
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mb-8">
             <button
               onClick={onScrollToForm}
-              className="group relative flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-bold rounded-full text-black bg-primary hover:bg-primary/90 transition-all duration-300 shadow-[0_0_35px_hsl(32_100%_52%_/_0.45)] hover:shadow-[0_0_55px_hsl(32_100%_52%_/_0.65)] w-full sm:w-auto justify-center"
+              className="group relative flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-bold rounded-full text-white transition-all duration-300 w-full sm:w-auto justify-center"
             >
               <span>Book Free Demo</span>
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />

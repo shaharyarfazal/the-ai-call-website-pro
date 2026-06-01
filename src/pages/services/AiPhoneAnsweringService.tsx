@@ -15,15 +15,37 @@ export default function AiPhoneAnsweringService() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent relative z-10 text-foreground">
       <Helmet>
-        <title>24/7 AI Phone Answering Service | Never Miss Another Call</title>
-        <meta name="description" content="Professional AI phone answering service with human-like conversations. 24/7 coverage, call routing, message taking, and after-hours support for your business." />
-        <meta name="keywords" content="AI phone answering, virtual receptionist, 24/7 phone service, automated answering, call handling" />
+        <title>24/7 AI Phone Answering Service | Custom Voice Receptionist USA</title>
+        <meta name="description" content="Professional custom-built AI phone answering service with human-like conversation latency. Achieve 24/7 coverage, CRM logging, and instant booking." />
+        <meta name="keywords" content="AI phone answering service, AI voice receptionist, 24/7 phone automation, virtual AI receptionist, clinical AI answering bot" />
         <link rel="canonical" href={canonical} />
         
-        <meta property="og:title" content="24/7 AI Phone Answering Service | Never Miss Another Call" />
-        <meta property="og:description" content="Professional AI phone answering service with human-like conversations. 24/7 coverage, call routing, message taking, and after-hours support for your business." />
+        <meta property="og:title" content="24/7 AI Phone Answering Service | Custom Voice Receptionist" />
+        <meta property="og:description" content="Professional custom-built AI phone answering service with human-like conversation latency. Achieve 24/7 coverage, CRM logging, and instant booking." />
         <meta property="og:type" content="service" />
         <meta property="og:url" content={canonical} />
+        <meta property="og:image" content="https://theaicall.pro/uploads/logo-96.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="24/7 AI Phone Answering Service" />
+        <meta name="twitter:description" content="Scale your phone operations with custom voice agents. Instant answers, CRM syncing, and smart booking." />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "AI Phone Answering Service",
+            "description": "High-performance custom AI voice receptionist and automated calling service with sub-second latency.",
+            "provider": {
+              "@type": "Organization",
+              "name": "The AI Call Pro",
+              "url": "https://theaicall.pro"
+            },
+            "areaServed": "US",
+            "hasCredential": "Certified Retell AI Partner"
+          })}
+        </script>
       </Helmet>
       
       <Header />

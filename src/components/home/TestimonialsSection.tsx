@@ -49,15 +49,21 @@ export function TestimonialsSection() {
               className="group bg-card border border-border hover:border-primary/20 rounded-2xl p-8 sm:p-10 transition-all duration-500"
             >
               {/* Quote mark */}
-              <span className="text-4xl font-serif text-muted-foreground/20 leading-none block mb-6">"</span>
+              <span
+                className="text-5xl font-serif leading-none block mb-5"
+                style={{ background: "linear-gradient(135deg, hsl(230 100% 62% / 0.5), hsl(250 80% 65% / 0.3))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
+              >&ldquo;</span>
               
               <p className="text-sm sm:text-base text-foreground/80 font-normal leading-relaxed mb-8">
                 {t.quote}
               </p>
 
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-muted border border-border flex items-center justify-center">
-                  <span className="text-xs font-light text-muted-foreground">{t.name.charAt(0)}</span>
+                <div
+                  className="w-8 h-8 rounded-full flex items-center justify-center shrink-0"
+                  style={{ background: "linear-gradient(135deg, hsl(230 100% 62% / 0.2), hsl(250 80% 65% / 0.15))", border: "1px solid hsl(230 100% 62% / 0.25)" }}
+                >
+                  <span className="text-xs font-semibold" style={{ background: "linear-gradient(135deg, hsl(230 100% 72%), hsl(199 100% 65%))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>{t.name.charAt(0)}</span>
                 </div>
                 <div>
                   <p className="text-xs text-foreground font-medium">{t.name}</p>

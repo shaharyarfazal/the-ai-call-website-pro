@@ -57,7 +57,7 @@ export function ThemeToggle() {
       
       {/* Subtle background glow that follows the theme */}
       <div className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity blur-lg ${
-        isDark ? "bg-cyan-400" : "bg-amber-500"
+        isDark ? "bg-primary" : "bg-primary"
       }`} />
     </motion.button>
   );

@@ -15,15 +15,37 @@ export default function AutomatedAppointmentScheduling() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent relative z-10 text-foreground">
       <Helmet>
-        <title>Automated Appointment Scheduling | AI-Powered Booking System</title>
-        <meta name="description" content="Streamline scheduling with AI-powered automated appointment booking. Calendar integration, automatic reminders, rescheduling handling, and timezone management." />
-        <meta name="keywords" content="automated appointment scheduling, AI booking system, calendar integration, appointment automation" />
+        <title>Automated Appointment Scheduling | AI-Powered Booking Bot</title>
+        <meta name="description" content="Deploy AI-powered automated appointment booking. Complete real-time calendar syncing, timezone management, friendly text reminders, and reschedule handling." />
+        <meta name="keywords" content="automated appointment scheduling, AI booking bot, voice AI scheduler, Google calendar automation, clinical scheduling AI" />
         <link rel="canonical" href={canonical} />
         
-        <meta property="og:title" content="Automated Appointment Scheduling | AI-Powered Booking System" />
-        <meta property="og:description" content="Streamline scheduling with AI-powered automated appointment booking. Calendar integration, automatic reminders, rescheduling handling, and timezone management." />
+        <meta property="og:title" content="Automated Appointment Scheduling | AI-Powered Booking Bot" />
+        <meta property="og:description" content="Deploy AI-powered automated appointment booking. Complete real-time calendar syncing, timezone management, friendly text reminders, and reschedule handling." />
         <meta property="og:type" content="service" />
         <meta property="og:url" content={canonical} />
+        <meta property="og:image" content="https://theaicall.pro/uploads/logo-96.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Automated Appointment Scheduling" />
+        <meta name="twitter:description" content="Reduce booking drop-offs and administrative hours with our low-latency custom voice scheduling assistant." />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Automated Appointment Scheduling Services",
+            "description": "High-performance AI voice scheduling systems integrating natively into calendar solutions and CRM pipelines.",
+            "provider": {
+              "@type": "Organization",
+              "name": "The AI Call Pro",
+              "url": "https://theaicall.pro"
+            },
+            "areaServed": "US",
+            "hasCredential": "Certified Retell AI Partner"
+          })}
+        </script>
       </Helmet>
       
       <Header />

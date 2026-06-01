@@ -11,7 +11,7 @@ function getCorsHeaders(origin: string | null) {
   };
 }
 
-const GATEWAY_URL = "https://connector-gateway.lovable.dev/resend";
+const RESEND_API_URL = "https://api.resend.com/emails";
 
 // Rate limiting: max 3 contact submissions per email per hour
 const MAX_SUBMISSIONS_PER_EMAIL = 3;
@@ -35,9 +35,6 @@ serve(async (req) => {
       });
     }
 
-    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-    if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
-
     const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
     if (!RESEND_API_KEY) throw new Error("RESEND_API_KEY is not configured");
 
@@ -47,7 +44,7 @@ serve(async (req) => {
     // --- [SECURITY] Verify Cloudflare Turnstile ---
     const turnstileSecret = Deno.env.get("TURNSTILE_SECRET_KEY");
     if (turnstileSecret) {
-      const isLocal = origin && (origin.includes("localhost") || origin.includes("127.0.0.1") || origin.includes("lovable.app"));
+      const isLocal = origin && (origin.includes("localhost") || origin.includes("127.0.0.1"));
       const isBypass = turnstileToken === "development-bypass-token" && isLocal;
 
       if (!isBypass) {
@@ -153,12 +150,11 @@ serve(async (req) => {
       </table>
     `;
 
-    const notificationRes = await fetch(`${GATEWAY_URL}/emails`, {
+    const notificationRes = await fetch(RESEND_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${LOVABLE_API_KEY}`,
-        "X-Connection-Api-Key": RESEND_API_KEY,
+        "Authorization": `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
         from: "The AI Call <noreply@theaicall.pro>",
@@ -192,12 +188,11 @@ serve(async (req) => {
       </div>
     `;
 
-    const confirmRes = await fetch(`${GATEWAY_URL}/emails`, {
+    const confirmRes = await fetch(RESEND_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${LOVABLE_API_KEY}`,
-        "X-Connection-Api-Key": RESEND_API_KEY,
+        "Authorization": `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
         from: "The AI Call <noreply@theaicall.pro>",

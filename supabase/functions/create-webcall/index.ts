@@ -4,8 +4,6 @@ const ALLOWED_ORIGINS = ["https://theaicall.pro", "https://www.theaicall.pro", "
 
 function isAllowedOrigin(origin: string): boolean {
   if (ALLOWED_ORIGINS.includes(origin)) return true;
-  // Allow any Lovable preview subdomain
-  if (/^https:\/\/.*\.lovable\.app$/.test(origin)) return true;
   return false;
 }
 

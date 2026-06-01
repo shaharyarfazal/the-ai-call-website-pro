@@ -10,8 +10,8 @@ export default function PrivacyPolicy() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent relative z-10 text-foreground">
       <Helmet>
-        <title>Privacy Policy | The AI Call - Voice AI Solutions</title>
-        <meta name="description" content="Privacy Policy for The AI Call voice AI solutions. Learn how we protect and handle your personal information." />
+        <title>Privacy Policy | The AI Call Pro - Voice AI Solutions</title>
+        <meta name="description" content="Privacy Policy for The AI Call Pro voice AI solutions. Learn how we protect and handle your personal information." />
         <link rel="canonical" href={canonical} />
         <meta name="robots" content="index, follow" />
       </Helmet>
@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
               <p className="mb-4">
-                The AI Call ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our voice AI services and website.
+                The AI Call Pro ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our voice AI services and website.
               </p>
             </section>
 
@@ -119,7 +119,7 @@ export default function PrivacyPolicy() {
                 If you have any questions about this Privacy Policy or our data practices, please contact us:
               </p>
               <div className="bg-muted/50 p-6 rounded-lg">
-                <p className="font-medium">The AI Call</p>
+                <p className="font-medium">The AI Call Pro</p>
                 <p>Email: privacy@theaicall.pro</p>
                 <p>Address: [Your Business Address]</p>
               </div>

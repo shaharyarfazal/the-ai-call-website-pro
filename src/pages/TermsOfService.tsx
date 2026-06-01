@@ -10,8 +10,8 @@ export default function TermsOfService() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent relative z-10 text-foreground">
       <Helmet>
-        <title>Terms of Service | The AI Call - Voice AI Solutions</title>
-        <meta name="description" content="Terms of Service for The AI Call voice AI solutions. Review our service terms and conditions." />
+        <title>Terms of Service | The AI Call Pro - Voice AI Solutions</title>
+        <meta name="description" content="Terms of Service for The AI Call Pro voice AI solutions. Review our service terms and conditions." />
         <link rel="canonical" href={canonical} />
         <meta name="robots" content="index, follow" />
       </Helmet>
@@ -29,14 +29,14 @@ export default function TermsOfService() {
             <section>
               <h2 className="text-2xl font-semibold mb-4">Agreement to Terms</h2>
               <p className="mb-4">
-                By accessing and using The AI Call services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using our services.
+                By accessing and using The AI Call Pro services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using our services.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold mb-4">Description of Services</h2>
               <p className="mb-4">
-                The AI Call provides voice AI solutions for businesses, including but not limited to:
+                The AI Call Pro provides voice AI solutions for businesses, including but not limited to:
               </p>
               <ul className="list-disc pl-6 space-y-2 mb-4">
                 <li>AI-powered phone answering services</li>
@@ -91,7 +91,7 @@ export default function TermsOfService() {
             <section>
               <h2 className="text-2xl font-semibold mb-4">Intellectual Property</h2>
               <p className="mb-4">
-                All content, features, and functionality of our services are owned by The AI Call and are protected by copyright, trademark, and other intellectual property laws. You may not modify, distribute, or create derivative works without our written consent.
+                All content, features, and functionality of our services are owned by The AI Call Pro and are protected by copyright, trademark, and other intellectual property laws. You may not modify, distribute, or create derivative works without our written consent.
               </p>
             </section>
 
@@ -118,7 +118,7 @@ export default function TermsOfService() {
             <section>
               <h2 className="text-2xl font-semibold mb-4">Limitation of Liability</h2>
               <p className="mb-4">
-                To the maximum extent permitted by law, The AI Call shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services.
+                To the maximum extent permitted by law, The AI Call Pro shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services.
               </p>
             </section>
 
@@ -149,7 +149,7 @@ export default function TermsOfService() {
                 For questions about these Terms of Service, please contact us:
               </p>
               <div className="bg-muted/50 p-6 rounded-lg">
-                <p className="font-medium">The AI Call</p>
+                <p className="font-medium">The AI Call Pro</p>
                 <p>Email: legal@theaicall.pro</p>
                 <p>Address: [Your Business Address]</p>
               </div>

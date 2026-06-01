@@ -90,7 +90,7 @@ function AudioCard({ demo, index }: { demo: DemoCall; index: number }) {
           onClick={togglePlay}
           disabled={!hasAudio}
           aria-label={isPlaying ? `Pause ${demo.title}` : `Play ${demo.title}`}
-          className="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/20 transition-colors duration-300 disabled:opacity-30 disabled:cursor-not-allowed shrink-0"
+          className="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/20 hover:shadow-[0_0_14px_hsl(230_100%_62%_/_0.4)] transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed shrink-0"
         >
           {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4 ml-0.5" />}
         </button>
@@ -126,7 +126,8 @@ function AudioCard({ demo, index }: { demo: DemoCall; index: number }) {
 export function VoiceDemoSection() {
   return (
     <section className="py-24 sm:py-36 bg-background border-y border-foreground/[0.05] relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/[0.04] blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[400px] rounded-full pointer-events-none" style={{ background: "radial-gradient(ellipse, hsl(230 100% 62% / 0.07) 0%, transparent 70%)", filter: "blur(80px)" }} />
+      <div className="absolute top-1/3 right-1/4 w-[400px] h-[300px] rounded-full pointer-events-none" style={{ background: "radial-gradient(ellipse, hsl(250 80% 65% / 0.05) 0%, transparent 70%)", filter: "blur(60px)" }} />
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div

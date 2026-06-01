@@ -57,7 +57,7 @@ export default function DemoROICalculator() {
                     <span className="text-sm font-bold text-primary tabular-nums">{fmt(callVolume)} calls</span>
                   </div>
                   <input type="range" min={10} max={2000} step={10} value={callVolume} onChange={(e) => setCallVolume(Number(e.target.value))}
-                    className="w-full h-1.5 bg-foreground/10 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary [&::-webkit-slider-thumb]:shadow-[0_0_10px_hsl(32_100%_52%_/_0.5)] [&::-webkit-slider-thumb]:cursor-pointer" />
+                    className="w-full h-1.5 bg-foreground/10 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary [&::-webkit-slider-thumb]:shadow-[0_0_10px_hsl(230_100%_62%_/_0.6)] [&::-webkit-slider-thumb]:cursor-pointer" />
                   <div className="flex justify-between text-[10px] text-muted-foreground/50 mt-1">
                     <span>10</span><span>2,000</span>
                   </div>
@@ -69,7 +69,7 @@ export default function DemoROICalculator() {
                     <span className="text-sm font-bold text-primary tabular-nums">${fmt(dealValue)}</span>
                   </div>
                   <input type="range" min={50} max={10000} step={50} value={dealValue} onChange={(e) => setDealValue(Number(e.target.value))}
-                    className="w-full h-1.5 bg-foreground/10 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary [&::-webkit-slider-thumb]:shadow-[0_0_10px_hsl(32_100%_52%_/_0.5)] [&::-webkit-slider-thumb]:cursor-pointer" />
+                    className="w-full h-1.5 bg-foreground/10 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary [&::-webkit-slider-thumb]:shadow-[0_0_10px_hsl(230_100%_62%_/_0.6)] [&::-webkit-slider-thumb]:cursor-pointer" />
                   <div className="flex justify-between text-[10px] text-muted-foreground/50 mt-1">
                     <span>$50</span><span>$10,000</span>
                   </div>

@@ -130,8 +130,8 @@ export default function Demo() {
   return (
     <div className="flex flex-col min-h-screen bg-background relative z-10 text-foreground">
       <Helmet>
-        <title>Free Demo — Stop Losing Revenue to Missed Calls | The AI Call</title>
-        <meta name="description" content="Book a free demo and see how AI voice agents answer every call in under 1 second. 500+ businesses trust The AI Call. No credit card required." />
+        <title>Free Demo — Stop Losing Revenue to Missed Calls | The AI Call Pro</title>
+        <meta name="description" content="Book a free demo and see how AI voice agents answer every call in under 1 second. 500+ businesses trust The AI Call Pro. No credit card required." />
         <link rel="canonical" href={canonical} />
         <meta property="og:title" content="Free Demo — AI Voice Agents That Answer Every Call" />
         <meta property="og:description" content="Stop losing revenue to missed calls. AI answers every call in <1 second, qualifies leads, books appointments 24/7." />
@@ -140,11 +140,11 @@ export default function Demo() {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Free Demo — The AI Call",
-            "description": "Book a free demo of AI voice agents that answer every call in under 1 second.",
-            "url": canonical,
-            "provider": { "@type": "Organization", "name": "The AI Call", "url": "https://theaicall.pro" }
+            "@type": "Action",
+            "name": "Free Demo — The AI Call Pro",
+            "description": "Book a free demo to see how voice AI agents answer calls and qualify leads.",
+            "target": canonical,
+            "provider": { "@type": "Organization", "@id": "https://theaicall.pro/#organization", "name": "The AI Call Pro", "url": "https://theaicall.pro" }
           })}
         </script>
       </Helmet>
@@ -225,7 +225,7 @@ export default function Demo() {
                   <>
                     <button
                       onClick={scrollToForm}
-                      className="group relative flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-bold rounded-full text-black bg-primary hover:bg-primary/90 transition-all duration-300 shadow-[0_0_35px_hsl(32_100%_52%_/_0.45)] hover:shadow-[0_0_55px_hsl(32_100%_52%_/_0.65)] w-full sm:w-auto justify-center"
+                      className="group relative flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-bold rounded-full text-white transition-all duration-300 w-full sm:w-auto justify-center"
                     >
                       <span>Book Free Demo</span>
                       <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -239,8 +239,8 @@ export default function Demo() {
                     </button>
                   </>
                 ) : isStarting ? (
-                  <button disabled className="flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-bold rounded-full text-black bg-primary/50 cursor-not-allowed w-full sm:w-auto justify-center">
-                    <Loader2 className="h-4 w-4 animate-spin text-black" />
+                  <button disabled className="flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 text-sm font-bold rounded-full text-white bg-primary/50 cursor-not-allowed w-full sm:w-auto justify-center">
+                    <Loader2 className="h-4 w-4 animate-spin text-white" />
                     <span>Connecting...</span>
                   </button>
                 ) : (

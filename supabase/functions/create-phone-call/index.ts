@@ -1,13 +1,11 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-// Only allow requests from the production site, local dev, and Lovable previews
+// Only allow requests from the production site and local dev
 const ALLOWED_ORIGINS = ["https://theaicall.pro", "https://www.theaicall.pro", "http://localhost:5173", "http://localhost:8080"];
 
 function isAllowedOrigin(origin: string): boolean {
   if (ALLOWED_ORIGINS.includes(origin)) return true;
-  // Allow any Lovable preview subdomain
-  if (/^https:\/\/.*\.lovable\.app$/.test(origin)) return true;
   return false;
 }
 
@@ -53,7 +51,7 @@ serve(async (req) => {
     const turnstileSecret = Deno.env.get("TURNSTILE_SECRET_KEY");
     if (turnstileSecret) {
       const turnstileToken = reqBody.turnstile_token || reqBody.turnstileToken;
-      const isLocal = origin && (origin.includes("localhost") || origin.includes("127.0.0.1") || origin.includes("lovable.app"));
+      const isLocal = origin && (origin.includes("localhost") || origin.includes("127.0.0.1"));
       const isBypass = turnstileToken === "development-bypass-token" && isLocal;
 
       if (!isBypass) {

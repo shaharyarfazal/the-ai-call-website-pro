@@ -44,7 +44,8 @@ const benefits = [
 export function BenefitsSection() {
   return (
     <section className="py-24 sm:py-36 bg-background relative overflow-hidden">
-      <div className="absolute bottom-0 left-0 w-[600px] h-[400px] rounded-full bg-primary/[0.03] blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[700px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(ellipse, hsl(230 100% 62% / 0.07) 0%, transparent 70%)", filter: "blur(100px)" }} />
+      <div className="absolute top-0 right-0 w-[500px] h-[400px] rounded-full pointer-events-none" style={{ background: "radial-gradient(ellipse, hsl(250 80% 65% / 0.05) 0%, transparent 70%)", filter: "blur(80px)" }} />
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -76,18 +77,22 @@ export function BenefitsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: i * 0.08 }}
-              className="group bg-card border border-border hover:border-primary/30 rounded-2xl p-7 sm:p-8 transition-all duration-500"
+              className="group relative bg-card border border-border hover:border-primary/30 rounded-2xl p-7 sm:p-8 transition-all duration-500 overflow-hidden"
             >
-              <div className="flex items-center justify-between mb-5">
-                <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary/20 transition-colors duration-500">
-                  {b.icon}
+              {/* Hover glow */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{ background: "radial-gradient(ellipse 80% 80% at 50% 120%, hsl(230 100% 62% / 0.07), transparent)" }} />
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-5">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary/20 group-hover:shadow-[0_0_16px_hsl(230_100%_62%_/_0.3)] transition-all duration-500">
+                    {b.icon}
+                  </div>
+                  <span className="text-xs font-bold tracking-tight" style={{ background: "linear-gradient(135deg, hsl(230 100% 72%), hsl(199 100% 65%))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>{b.stat}</span>
                 </div>
-                <span className="text-xs font-bold text-primary tracking-tight">{b.stat}</span>
+                <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 tracking-tight font-heading">
+                  {b.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{b.detail}</p>
               </div>
-              <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 tracking-tight font-heading">
-                {b.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{b.detail}</p>
             </motion.div>
           ))}
         </div>

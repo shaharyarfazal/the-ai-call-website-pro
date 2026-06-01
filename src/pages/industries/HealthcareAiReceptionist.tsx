@@ -91,9 +91,38 @@ export default function HealthcareAiReceptionist() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent relative z-10 text-foreground">
       <Helmet>
-        <title>Healthcare AI Receptionist | HIPAA-Compliant Patient Communication</title>
-        <meta name="description" content="Transform your medical practice with our AI receptionist. HIPAA-compliant appointment scheduling, patient communication, and 24/7 support. Reduce costs by 70%." />
+        <title>Healthcare AI Receptionist | HIPAA-Compliant Medical Answering Bot</title>
+        <meta name="description" content="Optimize clinical operations with HIPAA-compliant AI medical receptionists. Automate patient scheduling, reminders, and billing queries with 24/7 availability." />
+        <meta name="keywords" content="healthcare AI receptionist, HIPAA compliant medical bot, patient appointment scheduling assistant, virtual clinic receptionist, AI medical answering service" />
         <link rel="canonical" href={canonical} />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Healthcare AI Receptionist | HIPAA-Compliant Medical Answering Bot" />
+        <meta property="og:description" content="Optimize clinical operations with HIPAA-compliant AI medical receptionists. Automate patient scheduling, reminders, and billing queries with 24/7 availability." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:image" content="https://theaicall.pro/uploads/logo-96.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="HIPAA-Compliant Healthcare AI Receptionist" />
+        <meta name="twitter:description" content="Enhance patient experience and cut clinic administrative overheads with custom-built conversational health bots." />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Healthcare AI Receptionist Service",
+            "description": "HIPAA-compliant, automated clinical appointment scheduling and patient query handling voice agent service.",
+            "provider": {
+              "@type": "Organization",
+              "name": "The AI Call Pro",
+              "url": "https://theaicall.pro"
+            },
+            "areaServed": "US",
+            "hasCredential": "Certified Retell AI Partner"
+          })}
+        </script>
       </Helmet>
       
       <Header />

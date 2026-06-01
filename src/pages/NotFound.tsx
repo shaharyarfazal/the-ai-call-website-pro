@@ -20,8 +20,8 @@ const NotFound = () => {
   return (
     <div className="flex flex-col min-h-screen bg-transparent relative z-10 text-foreground overflow-hidden">
       <Helmet>
-        <title>Page Not Found | The AI Call</title>
-        <meta name="description" content="Oops! The page you are looking for does not exist on The AI Call. Return to safety." />
+        <title>Page Not Found | The AI Call Pro</title>
+        <meta name="description" content="Oops! The page you are looking for does not exist on The AI Call Pro. Return to safety." />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 

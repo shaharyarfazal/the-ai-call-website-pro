@@ -246,23 +246,23 @@ export default function Index() {
         <FluidBackground />
         {callStarted && <NorthernLights audioLevel={audioLevel} isListening={callStarted} />}
         <Helmet>
-          <title>Top AI Calling Agency | Custom Voice AI Automation | The AI Call</title>
-          <meta name="description" content="Hire the top AI calling agency to build custom voice AI agents for inbound triage and outbound sales. Certified Retell AI developers. Sub-second latency. Turn missed calls into booked meetings 24/7." />
-          <meta name="keywords" content="top AI calling agency, voice AI agency, custom AI voice developers, Retell AI partner, inbound lead qualification, outbound sales AI, automated cold calling, AI phone automation, Synthflow alternative, USA" />
+          <title>High-Performance Voice AI Agents | The AI Call Pro</title>
+          <meta name="description" content="Deploy custom, high-performance voice AI receptionists and calling systems designed for professional teams, clinics, and modern agencies. Achieve sub-second latency with The AI Call Pro." />
+          <meta name="keywords" content="pro AI voice agents, voice AI receptionist, clinical voice bot, high-performance voice AI, custom voice automation, clinical AI receptionist, CRM voice integration, Retell AI pro developers" />
           <link rel="canonical" href={canonical} />
-          <meta property="og:title" content="Top AI Calling Agency | Custom Voice AI Automation" />
-          <meta property="og:description" content="Custom AI voice agents that handle inbound triage and outbound lead generation 24/7. Built by certified Retell AI developers." />
+          <meta property="og:title" content="High-Performance Voice AI Agents | The AI Call Pro" />
+          <meta property="og:description" content="Custom, low-latency clinical and professional voice AI receptionists. Built by certified Retell AI Pro developers." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://theaicall.pro" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Top AI Calling Agency | The AI Call" />
+          <meta name="twitter:title" content="High-Performance Voice AI Agents | The AI Call Pro" />
           <meta name="twitter:description" content="Turn missed calls into booked meetings with custom AI voice agents. Certified Retell AI partner." />
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              "name": "The AI Call",
-              "description": "Top AI calling agency specializing in custom voice AI solutions for inbound lead qualification and outbound sales, certified Retell AI partner.",
+              "name": "The AI Call Pro",
+              "description": "High-performance voice AI agency specializing in custom clinical receptionists and intelligent CRM voice automation for professional teams.",
               "url": "https://theaicall.pro",
               "serviceType": "AI Voice Automation",
               "areaServed": "US",
@@ -281,18 +281,20 @@ export default function Index() {
               
               {/* Certified Retell AI Partner badge — CSS animation, no render-blocking JS */}
               <div
-                className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm animate-[fadeInUp_0.6s_ease-out_0.1s_both]"
+                className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/[0.08] backdrop-blur-sm animate-[fadeInUp_0.6s_ease-out_0.1s_both] shadow-[0_0_20px_hsl(230_100%_62%_/_0.15)]"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                <span className="text-[10px] sm:text-xs tracking-[0.25em] uppercase text-foreground/80 dark:text-primary font-bold">Certified Retell AI Partner</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shadow-[0_0_6px_hsl(230_100%_62%_/_0.8)]" />
+                <span className="text-[10px] sm:text-xs tracking-[0.25em] uppercase text-primary/90 font-bold">Certified Retell AI Partner</span>
               </div>
 
               {/* H1 — Word-by-word reveal with CSS animations */}
               <h1 className="relative text-center">
-                {["Turn", "Missed", "Calls", "Into", "Booked", "Meetings."].map((word, i) => (
+                {["High-Performance", "Voice", "AI", "Built", "For", "Pro", "Teams."].map((word, i) => (
                   <span key={word} className="inline-block overflow-hidden mr-2 sm:mr-3">
                     <span
-                      className="inline-block text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground tracking-tight leading-[1.1] font-heading animate-[slideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_both]"
+                      className={`inline-block text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.1] font-heading animate-[slideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_both] ${
+                        word === 'Pro' ? 'text-shimmer' : 'text-foreground'
+                      }`}
                       style={{ animationDelay: `${0.1 * i}s` }}
                     >
                       {word}
@@ -303,14 +305,14 @@ export default function Index() {
 
               {/* Horizontal reveal line — CSS animation */}
               <div
-                className="w-full max-w-xs h-px bg-gradient-to-r from-transparent via-white/30 to-transparent origin-center animate-[scaleInX_1.2s_cubic-bezier(0.22,1,0.36,1)_0.6s_both]"
+                className="relative w-full max-w-xs h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent origin-center animate-[scaleInX_1.2s_cubic-bezier(0.22,1,0.36,1)_0.6s_both] overflow-hidden beam-sweep"
               />
 
               {/* Sub-headline — CSS animation, no Framer Motion blocking LCP */}
               <p
                 className="text-sm sm:text-base text-foreground/80 font-normal text-center max-w-2xl leading-relaxed animate-[fadeInUp_0.8s_ease-out_0.5s_both]"
               >
-                We build custom AI voice agents that handle your inbound triage and outbound lead generation 24/7. Human-sounding conversations, fully integrated into your workflow.
+                We design and deploy custom clinical receptionists, client booking assistants, and automated voice channels 24/7. Achieve sub-second latency and intelligent CRM integrations built specifically for professional operations.
               </p>
 
               {/* === MOVIE SUBTITLE TRANSCRIPT === */}
@@ -358,25 +360,31 @@ export default function Index() {
               >
                 {!callStarted && !isStarting ? (
                   <>
-                    {/* Primary CTA — brand orange with glow */}
+                    {/* Primary CTA — electric indigo gradient with glow */}
                     <button
                       onClick={handleStartCall}
-                      className="group relative flex items-center gap-3 px-8 py-4 text-sm font-bold rounded-full text-black bg-primary hover:bg-primary/90 transition-all duration-300 cursor-pointer shadow-[0_0_30px_hsl(32_100%_52%_/_0.4)] hover:shadow-[0_0_55px_hsl(32_100%_52%_/_0.65)]"
+                      className="group relative flex items-center gap-3 px-8 py-4 text-sm font-bold rounded-full text-white transition-all duration-300 cursor-pointer ring-pulse"
+                      style={{
+                        background: "linear-gradient(135deg, hsl(230 100% 62%) 0%, hsl(250 80% 65%) 100%)",
+                        boxShadow: "0 0 35px hsl(230 100% 62% / 0.45), 0 8px 25px hsl(230 100% 62% / 0.3), inset 0 1px 0 hsl(0 0% 100% / 0.15)",
+                      }}
                     >
                       <Mic className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
                       <span>Talk With AI Now</span>
+                      <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: "linear-gradient(135deg, hsl(230 100% 68%) 0%, hsl(250 80% 72%) 100%)" }} />
                     </button>
                     {/* Secondary ghost button */}
                     <a
                       href="/book-appointment"
-                      className="flex items-center gap-3 px-8 py-4 text-sm font-medium rounded-full text-foreground/80 border border-foreground/30 hover:border-primary/50 hover:text-primary hover:bg-primary/5 transition-all duration-300"
+                      className="flex items-center gap-3 px-8 py-4 text-sm font-medium rounded-full text-foreground/70 border border-primary/25 hover:border-primary/60 hover:text-primary hover:bg-primary/8 transition-all duration-300"
+                      style={{ backdropFilter: "blur(8px)" }}
                     >
                       <span>Book Strategy Call</span>
                     </a>
                   </>
                 ) : isStarting ? (
-                  <button disabled className="flex items-center gap-3 px-8 py-4 text-sm font-bold rounded-full text-black bg-primary/50 cursor-not-allowed">
-                    <Loader2 className="h-4 w-4 animate-spin text-black" />
+                  <button disabled className="flex items-center gap-3 px-8 py-4 text-sm font-bold rounded-full text-white bg-primary/50 cursor-not-allowed">
+                    <Loader2 className="h-4 w-4 animate-spin text-white" />
                     <span>Connecting...</span>
                   </button>
                 ) : (
